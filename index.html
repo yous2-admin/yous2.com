@@ -35,12 +35,23 @@
             }
         }
     </script>
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 25s linear infinite;
+        }
+    </style>
 </head>
 <body class="bg-darkBg text-gray-100 font-sans antialiased selection:bg-amber-500 selection:text-black">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-amber-500 text-black text-xs md:text-sm font-medium py-2 px-4 text-center overflow-hidden whitespace-nowrap">
-        <div class="inline-block animate-marquee">
+    <!-- Top Announcement Bar (Fixed Scrolling) -->
+    <div class="bg-amber-500 text-black text-xs md:text-sm font-medium py-2 px-4 overflow-hidden relative whitespace-nowrap">
+        <div class="animate-marquee">
             🚀 Fast Turnaround for Prints, Branding, Legal Services & Travel Solutions &nbsp;&bull;&nbsp; 📍 Doorstep Express Dispatch Across Kolkata & Pan-India &nbsp;&bull;&nbsp; 🌟 YouS2 Studio &mdash; Loknath Market, Jagatpur, Baguiati, Kolkata &nbsp;&bull;&nbsp; ✔️ 100% Tax Compliant GST Invoicing Available
         </div>
     </div>
