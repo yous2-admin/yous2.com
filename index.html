@@ -66,14 +66,10 @@
                 <a href="#home" class="hover:text-amber-400 transition">Home</a>
                 <a href="#about" class="hover:text-amber-400 transition">About Us</a>
                 <a href="#services" class="hover:text-amber-400 transition">Services</a>
-                <a href="#estimator" class="hover:text-amber-400 transition">Quick Estimator</a>
                 <a href="#faq" class="hover:text-amber-400 transition">FAQ</a>
                 <a href="#contact" class="hover:text-amber-400 transition">Contact Us</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <a href="#estimator" class="hidden sm:inline-flex items-center gap-2 bg-gray-800 border border-gray-700 px-4 py-2 rounded-full text-xs font-semibold text-gray-200 hover:bg-gray-700 transition">
-                    <i class="fa-solid fa-calculator text-amber-400"></i> Get Estimate
-                </a>
                 <a href="https://wa.me/918509788421?text=Hi%20YouS2,%20I%20want%20to%20know%20more%20about%20your%20services." target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 text-black px-5 py-2.5 rounded-full text-xs font-bold shadow-lg hover:opacity-90 transition">
                     <i class="fa-brands fa-whatsapp text-base"></i> +91-8509788421
                 </a>
@@ -315,48 +311,6 @@
                     <li>&bull; Custom Software / Billing Tool Setup</li>
                     <li>&bull; QR Code Menu & Payment Solutions</li>
                 </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quick Price Estimator Section -->
-    <section id="estimator" class="py-20 px-4 max-w-7xl mx-auto" data-aos="fade-up">
-        <div class="bg-gradient-to-br from-cardBg to-gray-900 border border-gray-800 rounded-3xl p-8 sm:p-12 shadow-2xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="text-amber-400 text-xs font-semibold tracking-widest uppercase">Interactive Calculator</span>
-                <h2 class="text-3xl font-bold mt-2 mb-4">Quick Price Estimator</h2>
-                <p class="text-gray-400 text-sm mb-6">Get a fast service estimate and forward it to WhatsApp for instant confirmation.</p>
-                
-                <div class="space-y-4">
-                    <div>
-                        <label class="block text-xs font-semibold text-gray-300 mb-2">Select Product / Service:</label>
-                        <select id="serviceSelect" class="w-full bg-darkBg border border-gray-700 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-amber-500" onchange="calculatePrice()">
-                            <option value="290">Custom DTF Cotton T-Shirt (Print) - ₹290</option>
-                            <option value="150">Visiting Cards (Box of 500 Matte) - ₹350</option>
-                            <option value="450">Customized Magic / Photo Mug - ₹250</option>
-                            <option value="600">LED Acrylic Neon Signage (Small) - ₹1,499</option>
-                            <option value="1200">MSME / Udyam Registration - ₹499</option>
-                            <option value="1500">GST Registration Support - ₹999</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-gray-300 mb-2">Quantity / Units:</label>
-                        <input type="number" id="qtyInput" value="1" min="1" class="w-full bg-darkBg border border-gray-700 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-amber-500" oninput="calculatePrice()">
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-darkBg/80 border border-gray-800 rounded-2xl p-8 text-center flex flex-col justify-between h-full">
-                <div>
-                    <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Estimated Starting Total</p>
-                    <div id="totalPriceDisplay" class="text-5xl font-extrabold text-amber-400 my-4">₹290</div>
-                    <p class="text-xs text-gray-500">*Standard package rates applied based on current input parameters.</p>
-                </div>
-                <div class="mt-8">
-                    <button onclick="sendEstimateWhatsApp()" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:opacity-90 text-black font-bold py-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> Book / Enquire on WhatsApp
-                    </button>
-                </div>
             </div>
         </div>
     </section>
