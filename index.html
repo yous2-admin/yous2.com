@@ -1,122 +1,525 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouS2 - Creative Printing Studio & Retail Shop</title>
+    <title>YouS2™ | Fulfil Your Needs & Desires - Printing, Legal, Travel & Business Solutions Kolkata</title>
+    <meta name="description" content="YouS2 is an independent custom apparel, DTF printing, LED neon signage, gifting studio, legal registration, travel booking, and business solutions hub crafted in Baguiati, Kolkata, India.">
+    <meta name="keywords" content="YouS2, Printing Studio Baguiati, DTF Printing Kolkata, Custom T-Shirts Kolkata, Legal Services Kolkata, Travel Bookings Kolkata, Sortnfix">
+    <meta name="author" content="Subrata Mazumdar">
+    
+    <!-- Open Graph / SEO Meta Tags -->
+    <meta property="og:title" content="YouS2™ | Fulfil Your Needs & Desires">
+    <meta property="og:description" content="Your complete business & creative solutions hub in Baguiati, Kolkata.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yous2.com">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f19',
+                        cardBg: '#111827',
+                        accentOrange: '#f59e0b',
+                        accentGold: '#d97706'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-darkBg text-gray-100 font-sans antialiased selection:bg-amber-500 selection:text-black">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-amber-500 text-black text-xs md:text-sm font-medium py-2 px-4 text-center overflow-hidden whitespace-nowrap">
+        <div class="inline-block animate-marquee">
+            🚀 Fast Turnaround for Prints, Branding, Legal Services & Travel Solutions &nbsp;&bull;&nbsp; 📍 Doorstep Express Dispatch Across Kolkata & Pan-India &nbsp;&bull;&nbsp; 🌟 YouS2 Studio &mdash; Loknath Market, Jagatpur, Baguiati, Kolkata &nbsp;&bull;&nbsp; ✔️ 100% Tax Compliant GST Invoicing Available
+        </div>
+    </div>
 
     <!-- Header / Navbar -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <header class="sticky top-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-2">
-                <span class="text-2xl font-black text-indigo-600">YouS2</span>
-                <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded-full font-medium">Printing Studio</span>
+                <a href="#" class="text-2xl font-extrabold tracking-wider text-white">You<span class="text-amber-500">S2</span><span class="text-xs text-gray-400 ml-1">™</span></a>
             </div>
-            <a href="https://wa.me/918509788421?text=Hi,%20I%20want%20to%20know%20more%20about%20your%20printing%20services." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-700 transition flex items-center gap-2">
-                <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us
-            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#home" class="hover:text-amber-400 transition">Home</a>
+                <a href="#collections" class="hover:text-amber-400 transition">Collections</a>
+                <a href="#services" class="hover:text-amber-400 transition">Services</a>
+                <a href="#estimator" class="hover:text-amber-400 transition">Quick Estimator</a>
+                <a href="#faq" class="hover:text-amber-400 transition">FAQ</a>
+                <a href="#contact" class="hover:text-amber-400 transition">Contact Us</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#estimator" class="hidden sm:inline-flex items-center gap-2 bg-gray-800 border border-gray-700 px-4 py-2 rounded-full text-xs font-semibold text-gray-200 hover:bg-gray-700 transition">
+                    <i class="fa-solid fa-calculator text-amber-400"></i> Get Estimate
+                </a>
+                <a href="https://wa.me/918509788421?text=Hi%20YouS2,%20I%20want%20to%20know%20more%20about%20your%20services." target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 text-black px-5 py-2.5 rounded-full text-xs font-bold shadow-lg hover:opacity-90 transition">
+                    <i class="fa-brands fa-whatsapp text-base"></i> +91-8509788421
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16 px-4 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-extxl font-bold mb-4">Your One-Stop Creative Printing Solution</h1>
-            <p class="text-lg text-indigo-100 mb-8">Visiting cards, flex banners, DTF prints, custom T-shirts, mugs, and corporate gifts at the best quality.</p>
-            <a href="#services" class="bg-white text-indigo-600 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition">View Our Services</a>
+    <section id="home" class="relative pt-20 pb-16 px-4 text-center overflow-hidden" data-aos="fade-in">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-xs font-semibold mb-6">
+                <i class="fa-solid fa-sparkles"></i> COMPLETE BUSINESS & CREATIVE SOLUTIONS HUB
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+                Your Vision, <br class="hidden sm:inline">
+                <span class="bg-gradient-to-r from-amber-400 via-pink-500 to-indigo-400 bg-clip-text text-transparent">Our Expertise.</span>
+            </h1>
+            <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto mb-10">
+                From high-quality Print & Merchandising to Cinematic Events, Legal documentation, Travel bookings, and Digital services &mdash; everything under one roof.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://wa.me/918509788421?text=Hi%20YouS2,%20I%20want%20a%20fast%20quote." target="_blank" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-black font-bold px-8 py-4 rounded-xl shadow-xl transition flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Get Fast Quote on WhatsApp
+                </a>
+                <a href="#services" class="w-full sm:w-auto bg-gray-900 border border-gray-700 hover:bg-gray-800 text-white font-medium px-8 py-4 rounded-xl transition">
+                    Explore All Services
+                </a>
+            </div>
+        </div>
+
+        <!-- Trust Badges Bar -->
+        <div class="max-w-7xl mx-auto mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
+            <div class="bg-cardBg/60 border border-gray-800 p-4 rounded-xl flex items-center gap-3 text-left" data-aos="fade-up" data-aos-delay="100">
+                <i class="fa-solid fa-file-invoice text-amber-400 text-xl p-2 bg-amber-400/10 rounded-lg"></i>
+                <div>
+                    <h4 class="text-xs font-bold text-white">GST Invoicing</h4>
+                    <p class="text-[11px] text-gray-400">Compliant B2B Billing</p>
+                </div>
+            </div>
+            <div class="bg-cardBg/60 border border-gray-800 p-4 rounded-xl flex items-center gap-3 text-left" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa-solid fa-bolt text-amber-400 text-xl p-2 bg-amber-400/10 rounded-lg"></i>
+                <div>
+                    <h4 class="text-xs font-bold text-white">Fast Execution</h4>
+                    <p class="text-[11px] text-gray-400">Express Studio Dispatch</p>
+                </div>
+            </div>
+            <div class="bg-cardBg/60 border border-gray-800 p-4 rounded-xl flex items-center gap-3 text-left" data-aos="fade-up" data-aos-delay="300">
+                <i class="fa-solid fa-star text-amber-400 text-xl p-2 bg-amber-400/10 rounded-lg"></i>
+                <div>
+                    <h4 class="text-xs font-bold text-white">Trusted Hub</h4>
+                    <p class="text-[11px] text-gray-400">Reliable Local Support</p>
+                </div>
+            </div>
+            <div class="bg-cardBg/60 border border-gray-800 p-4 rounded-xl flex items-center gap-3 text-left" data-aos="fade-up" data-aos-delay="400">
+                <i class="fa-solid fa-location-dot text-amber-400 text-xl p-2 bg-amber-400/10 rounded-lg"></i>
+                <div>
+                    <h4 class="text-xs font-bold text-white">Local Baguiati Studio</h4>
+                    <p class="text-[11px] text-gray-400">Lokenath Market, Jagatpur</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section id="services" class="max-w-7xl mx-auto px-4 py-16">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-900">Our Services & Products</h2>
-            <p class="text-gray-600 mt-2">Choose what you need and order directly via WhatsApp</p>
+    <!-- Complete Service Portfolio -->
+    <section id="services" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-amber-400 text-xs font-semibold tracking-widest uppercase">Choose a category to explore our specialized solutions</span>
+            <h2 class="text-3xl sm:text-4xl font-bold mt-2">Complete Service Portfolio</h2>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Service 1 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition border border-gray-100">
-                <div class="p-6">
-                    <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-id-card"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Visiting Cards & ID Cards</h3>
-                    <p class="text-gray-600 text-sm mb-4">High-quality matte, gloss, velvet finish visiting cards & durable PVC ID cards.</p>
-                    <a href="https://wa.me/918509788421?text=I%20am%20interested%20in%20Visiting%20Cards%20/%20PVC%20ID%20Cards." target="_blank" class="block text-center bg-indigo-50 text-indigo-600 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition">Order via WhatsApp</a>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Print & Merchandising -->
+            <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl hover:border-amber-500/50 transition group" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-amber-400 text-3xl mb-4 p-3 bg-amber-400/10 w-fit rounded-xl group-hover:scale-110 transition">
+                    <i class="fa-solid fa-print"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Print & Merchandising</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>&bull; Custom DTF T-Shirts & Uniforms</li>
+                    <li>&bull; Visiting Cards, Bill Books & Leaflets</li>
+                    <li>&bull; Mugs, Keychains & Corporate Gifts</li>
+                    <li>&bull; Glow Sign Boards & Standees</li>
+                </ul>
+            </div>
+
+            <!-- Memorable Events -->
+            <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl hover:border-amber-500/50 transition group" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-amber-400 text-3xl mb-4 p-3 bg-amber-400/10 w-fit rounded-xl group-hover:scale-110 transition">
+                    <i class="fa-solid fa-camera-retro"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Memorable Events Made Easy</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>&bull; Cinematic Photography & Videography</li>
+                    <li>&bull; Delicious Catering & Food Services</li>
+                    <li>&bull; Stunning Floral & Stage Decoration</li>
+                    <li>&bull; Pro Sound & Lighting Systems</li>
+                </ul>
+            </div>
+
+            <!-- Business Registrations -->
+            <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl hover:border-amber-500/50 transition group" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-amber-400 text-3xl mb-4 p-3 bg-amber-400/10 w-fit rounded-xl group-hover:scale-110 transition">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Business Registrations</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>&bull; MSME (Udyam) Registration</li>
+                    <li>&bull; Trade License Services</li>
+                    <li>&bull; GST Registration & Return Filing</li>
+                    <li>&bull; Food License (FSSAI) Processing</li>
+                </ul>
+            </div>
+
+            <!-- Citizen & Tax Support -->
+            <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl hover:border-amber-500/50 transition group" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-amber-400 text-3xl mb-4 p-3 bg-amber-400/10 w-fit rounded-xl group-hover:scale-110 transition">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Citizen & Tax Support</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>&bull; PAN Card & Voter ID Processing</li>
+                    <li>&bull; Professional Tax (P-Tax) Filing</li>
+                    <li>&bull; Income Tax Return (ITR) Assistance</li>
+                    <li>&bull; Legal Agreement & Documentation</li>
+                </ul>
+            </div>
+
+            <!-- Ticketing & Bookings -->
+            <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl hover:border-amber-500/50 transition group" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-amber-400 text-3xl mb-4 p-3 bg-amber-400/10 w-fit rounded-xl group-hover:scale-110 transition">
+                    <i class="fa-solid fa-plane-departure"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Ticketing & Bookings</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>&bull; Flight & Train Ticket Booking</li>
+                    <li>&bull; Bus Reservation Services</li>
+                    <li>&bull; Hotel & Resort Bookings</li>
+                    <li>&bull; Complete Tour Package Planning</li>
+                </ul>
+            </div>
+
+            <!-- Passport & Visa Support -->
+            <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl hover:border-amber-500/50 transition group" data-aos="fade-up" data-aos-delay="600">
+                <div class="text-amber-400 text-3xl mb-4 p-3 bg-amber-400/10 w-fit rounded-xl group-hover:scale-110 transition">
+                    <i class="fa-solid fa-earth-americas"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Passport & Visa Support</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>&bull; New Passport & Renewal Processing</li>
+                    <li>&bull; Visa Consultation & Application</li>
+                    <li>&bull; Travel Insurance Assistance</li>
+                    <li>&bull; Local Cab & Car Rental Support</li>
+                </ul>
+            </div>
+
+            <!-- Web & Graphic Design -->
+            <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl hover:border-amber-500/50 transition group" data-aos="fade-up" data-aos-delay="700">
+                <div class="text-amber-400 text-3xl mb-4 p-3 bg-amber-400/10 w-fit rounded-xl group-hover:scale-110 transition">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Web & Graphic Design</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>&bull; Professional Logo & Branding Design</li>
+                    <li>&bull; Business Website & Landing Pages</li>
+                    <li>&bull; Social Media Graphics & Banners</li>
+                    <li>&bull; Digital Menu & Catalogues</li>
+                </ul>
+            </div>
+
+            <!-- Online Marketing & IT -->
+            <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl hover:border-amber-500/50 transition group" data-aos="fade-up" data-aos-delay="800">
+                <div class="text-amber-400 text-3xl mb-4 p-3 bg-amber-400/10 w-fit rounded-xl group-hover:scale-110 transition">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Online Marketing & IT</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li>&bull; Google My Business Setup & Optimization</li>
+                    <li>&bull; Social Media Page Management</li>
+                    <li>&bull; Custom Software / Billing Tool Setup</li>
+                    <li>&bull; QR Code Menu & Payment Solutions</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Price Estimator Section -->
+    <section id="estimator" class="py-20 px-4 max-w-7xl mx-auto" data-aos="fade-up">
+        <div class="bg-gradient-to-br from-cardBg to-gray-900 border border-gray-800 rounded-3xl p-8 sm:p-12 shadow-2xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-amber-400 text-xs font-semibold tracking-widest uppercase">Interactive Calculator</span>
+                <h2 class="text-3xl font-bold mt-2 mb-4">Quick Price Estimator</h2>
+                <p class="text-gray-400 text-sm mb-6">Get a fast service estimate and forward it to WhatsApp for instant confirmation.</p>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-2">Select Product / Service:</label>
+                        <select id="serviceSelect" class="w-full bg-darkBg border border-gray-700 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-amber-500" onchange="calculatePrice()">
+                            <option value="290">Custom DTF Cotton T-Shirt (Print) - ₹290</option>
+                            <option value="150">Visiting Cards (Box of 500 Matte) - ₹350</option>
+                            <option value="450">Customized Magic / Photo Mug - ₹250</option>
+                            <option value="600">LED Acrylic Neon Signage (Small) - ₹1,499</option>
+                            <option value="1200">MSME / Udyam Registration - ₹499</option>
+                            <option value="1500">GST Registration Support - ₹999</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-2">Quantity / Units:</label>
+                        <input type="number" id="qtyInput" value="1" min="1" class="w-full bg-darkBg border border-gray-700 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-amber-500" oninput="calculatePrice()">
+                    </div>
                 </div>
             </div>
 
-            <!-- Service 2 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition border border-gray-100">
-                <div class="p-6">
-                    <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-shirt"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Custom T-Shirts & DTF Prints</h3>
-                    <p class="text-gray-600 text-sm mb-4">Customized T-shirts, DTF, and UV DTF prints with vibrant colors and durability.</p>
-                    <a href="https://wa.me/918509788421?text=I%20am%20interested%20in%20Custom%20T-Shirts%20and%20DTF%20Prints." target="_blank" class="block text-center bg-indigo-50 text-indigo-600 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition">Order via WhatsApp</a>
+            <div class="bg-darkBg/80 border border-gray-800 rounded-2xl p-8 text-center flex flex-col justify-between h-full">
+                <div>
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Estimated Starting Total</p>
+                    <div id="totalPriceDisplay" class="text-5xl font-extrabold text-amber-400 my-4">₹290</div>
+                    <p class="text-xs text-gray-500">*Standard package rates applied based on current input parameters.</p>
+                </div>
+                <div class="mt-8">
+                    <button onclick="sendEstimateWhatsApp()" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:opacity-90 text-black font-bold py-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Book / Enquire on WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Channel Banner -->
+    <section class="py-12 px-4 max-w-5xl mx-auto" data-aos="zoom-in">
+        <div class="bg-gradient-to-r from-emerald-950/60 to-darkBg border border-emerald-500/30 rounded-3xl p-8 text-center relative overflow-hidden">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold mb-4">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Official Community
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-3">Join the YouS2 WhatsApp Channel</h2>
+            <p class="text-gray-300 text-sm max-w-xl mx-auto mb-6">Get instant alerts for private flash sales, new product drops, and exclusive community updates directly in your WhatsApp.</p>
+            <div class="flex flex-wrap justify-center gap-4 text-xs text-gray-400 mb-6">
+                <span>✓ Early product drops</span>
+                <span>✓ Subscriber-only deals</span>
+                <span>✓ Zero spam</span>
+            </div>
+            <a href="https://whatsapp.com" target="_blank" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-black font-bold px-6 py-3 rounded-full shadow-lg transition">
+                <i class="fa-brands fa-whatsapp text-base"></i> Join Channel on WhatsApp
+            </a>
+            <p class="text-[11px] text-gray-500 mt-4">100% private. Your phone number is always hidden from other followers.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-4 max-w-4xl mx-auto" data-aos="fade-up">
+        <div class="text-center mb-16">
+            <span class="text-amber-400 text-xs font-semibold tracking-widest uppercase">Common Inquiries</span>
+            <h2 class="text-3xl font-bold mt-2">Frequently Asked Questions</h2>
+            <p class="text-gray-400 text-sm mt-1">Everything you need to know about placing orders, studio bookings, and turnaround times.</p>
+        </div>
+
+        <div class="space-y-4">
+            <details class="bg-cardBg border border-gray-800 rounded-xl p-5 group cursor-pointer">
+                <summary class="font-semibold text-white flex justify-between items-center">
+                    Where is YouS2 studio located, and do you accept walk-ins?
+                    <i class="fa-solid fa-plus text-amber-400 group-open:rotate-45 transition"></i>
+                </summary>
+                <p class="text-gray-400 text-sm mt-3">We are located at YouS2, Loknath Market, Jagatpur, Aswini Nagar, Baguiati, Kolkata &ndash; 700159. Walk-ins are always welcome during business hours!</p>
+            </details>
+
+            <details class="bg-cardBg border border-gray-800 rounded-xl p-5 group cursor-pointer">
+                <summary class="font-semibold text-white flex justify-between items-center">
+                    What is the average turnaround time for personalized gifts & apparel?
+                    <i class="fa-solid fa-plus text-amber-400 group-open:rotate-45 transition"></i>
+                </summary>
+                <p class="text-gray-400 text-sm mt-3">Most standard custom apparel and DTF prints are ready within 24 to 48 hours. Express same-day options are available for urgent requests.</p>
+            </details>
+
+            <details class="bg-cardBg border border-gray-800 rounded-xl p-5 group cursor-pointer">
+                <summary class="font-semibold text-white flex justify-between items-center">
+                    Can I review digital mockups before printing begins?
+                    <i class="fa-solid fa-plus text-amber-400 group-open:rotate-45 transition"></i>
+                </summary>
+                <p class="text-gray-400 text-sm mt-3">Yes! We share digital proofs/mockups over WhatsApp for your approval before final production starts.</p>
+            </details>
+
+            <details class="bg-cardBg border border-gray-800 rounded-xl p-5 group cursor-pointer">
+                <summary class="font-semibold text-white flex justify-between items-center">
+                    Do you provide official GST invoices for corporate orders?
+                    <i class="fa-solid fa-plus text-amber-400 group-open:rotate-45 transition"></i>
+                </summary>
+                <p class="text-gray-400 text-sm mt-3">Yes, 100% compliant B2B tax invoices with valid GSTIN are provided for all corporate and business print orders.</p>
+            </details>
+
+            <details class="bg-cardBg border border-gray-800 rounded-xl p-5 group cursor-pointer">
+                <summary class="font-semibold text-white flex justify-between items-center">
+                    What government documentation services do you assist with?
+                    <i class="fa-solid fa-plus text-amber-400 group-open:rotate-45 transition"></i>
+                </summary>
+                <p class="text-gray-400 text-sm mt-3">Through sortnfix and our partner network, we assist with MSME registration, Trade Licenses, GST filings, PAN cards, and ITR filing.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Contact / Direct Message Section -->
+    <section id="contact" class="py-20 px-4 max-w-7xl mx-auto" data-aos="fade-up">
+        <div class="bg-cardBg border border-gray-800 rounded-3xl p-8 sm:p-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+                <span class="text-amber-400 text-xs font-semibold tracking-widest uppercase">Visit Our Studio</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2 mb-4">Let's Bring Your Vision to Life</h2>
+                <p class="text-gray-400 text-sm mb-8">Drop by our Baguiati studio or drop us a text on WhatsApp for immediate support, design proofs, and quick order quotes.</p>
+
+                <div class="space-y-4 text-sm text-gray-300">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-amber-400 mt-1"></i>
+                        <div><strong class="text-white">Studio Address:</strong><br>YouS2, Loknath Market, Jagatpur, Baguiati, Kolkata &ndash; 700159, West Bengal</div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-amber-400"></i>
+                        <div><strong class="text-white">WhatsApp / Direct Call:</strong><br>+91-8509788421</div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-clock text-amber-400 mt-1"></i>
+                        <div><strong class="text-white">Opening Hours:</strong><br>Mon &ndash; Sat: 9:30 AM &ndash; 9:30 PM IST | Sun: 10:00 AM &ndash; 6:00 PM</div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <a href="https://wa.me/918509788421" target="_blank" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-black font-bold px-6 py-3 rounded-xl shadow-lg transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Chat with Us Now
+                    </a>
                 </div>
             </div>
 
-            <!-- Service 3 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition border border-gray-100">
-                <div class="p-6">
-                    <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-image"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Flex Banners & Leaflets</h3>
-                    <p class="text-gray-600 text-sm mb-4">Eye-catching flex banners, vinyl stickers, posters, and promotional leaflets.</p>
-                    <a href="https://wa.me/918509788421?text=I%20am%20interested%20in%20Flex%20Banners%20and%20Leaflets." target="_blank" class="block text-center bg-indigo-50 text-indigo-600 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition">Order via WhatsApp</a>
+            <!-- Direct Message Form -->
+            <div class="bg-darkBg border border-gray-800 rounded-2xl p-6 sm:p-8">
+                <h3 class="text-xl font-bold mb-2 text-white">Send Direct Message</h3>
+                <p class="text-xs text-gray-400 mb-6">Fill in details below to launch a pre-filled direct WhatsApp discussion with our specialists.</p>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-2">Your Name</label>
+                        <input type="text" id="clientName" placeholder="e.g. Amitava Sen" class="w-full bg-cardBg border border-gray-700 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-2">Service Required</label>
+                        <select id="clientService" class="w-full bg-cardBg border border-gray-700 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                            <option>Print & Merchandising (DTF / Mugs / Cards)</option>
+                            <option>Studio Photography / Cinematic Video</option>
+                            <option>Business Registrations & GST / MSME</option>
+                            <option>Travel & Ticketing Services</option>
+                            <option>Web & Graphic Design / IT Services</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-2">Specific Requirements or Query</label>
+                        <textarea id="clientQuery" rows="3" placeholder="Tell us about size, quantity, or dates..." class="w-full bg-cardBg border border-gray-700 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-amber-500"></textarea>
+                    </div>
+                    <button onclick="sendDirectMessage()" class="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Send to Studio WhatsApp
+                    </button>
                 </div>
             </div>
-
-            <!-- Service 4 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition border border-gray-100">
-                <div class="p-6">
-                    <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-mug-hot"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Ceramic Mugs & Keychains</h3>
-                    <p class="text-gray-600 text-sm mb-4">Personalized photo mugs and custom keychains (MOQ applicable).</p>
-                    <a href="https://wa.me/918509788421?text=I%20am%20interested%20in%20Mugs%20and%20Keychains." target="_blank" class="block text-center bg-indigo-50 text-indigo-600 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition">Order via WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Service 5 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition border border-gray-100">
-                <div class="p-6">
-                    <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-stamp"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Rubber Stamps & Lamination</h3>
-                    <p class="text-gray-600 text-sm mb-4">Pre-inked/self-inking rubber stamps, document lamination, and spiral binding.</p>
-                    <a href="https://wa.me/918509788421?text=I%20am%20interested%20in%20Rubber%20Stamps%20and%20Lamination." target="_blank" class="block text-center bg-indigo-50 text-indigo-600 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition">Order via WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Service 6 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition border border-gray-100">
-                <div class="p-6">
-                    <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-briefcase"></i></div>
-                    <h3 class="text-xl font-bold mb-2">sortnfix Business Solutions</h3>
-                    <p class="text-gray-600 text-sm mb-4">Financial, legal, document registration, and digital promotional services.</p>
-                    <a href="https://wa.me/918509788421?text=I%20want%20to%20know%20about%20sortnfix%20services." target="_blank" class="block text-center bg-indigo-50 text-indigo-600 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition">Enquire on WhatsApp</a>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 px-4">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-                <h3 class="text-xl font-bold mb-4">YouS2</h3>
-                <p class="text-gray-400 text-sm">Lokenath Market, Jagatpur, Aswini Nagar,<br>Baguiati, Kolkata, West Bengal - 700159</p>
+    <footer class="bg-cardBg border-t border-gray-800 text-gray-400 py-16 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+            <div class="lg:col-span-2">
+                <div class="text-2xl font-extrabold text-white mb-4">You<span class="text-amber-500">S2</span> <span class="text-xs bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded font-normal">CREATOR HUB</span></div>
+                <p class="text-sm text-gray-400 mb-4 max-w-sm">YouS2 is an independent custom apparel, direct-to-film (DTF) printing, customized LED neon signage, and premium gifting studio crafted in Kolkata, India.</p>
+                <p class="text-xs text-gray-400 mb-2"><i class="fa-solid fa-location-dot text-amber-400 mr-2"></i>YouS2, Loknath Market, Jagatpur, Baguiati, Kolkata, WB &ndash; 700159</p>
+                <p class="text-xs text-gray-400"><i class="fa-solid fa-globe text-amber-400 mr-2"></i>Website: <a href="https://www.yous2.com" class="text-amber-400 hover:underline">www.yous2.com</a></p>
             </div>
-            <div class="md:text-right">
-                <p class="text-gray-400 text-sm">Powered by Cloudflare Pages</p>
-                <p class="text-gray-500 text-xs mt-2">&copy; 2026 YouS2. All rights reserved.</p>
+
+            <div>
+                <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Our Services</h4>
+                <ul class="space-y-2.5 text-xs">
+                    <li><a href="#services" class="hover:text-amber-400 transition">Custom DTF Apparel</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition">LED Acrylic Neon Signs</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition">Custom Photo Mugs & Gifts</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition">Visiting Cards & Standees</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition">Wedding Photography & Video</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition">Trade License & MSME Help</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Collections</h4>
+                <ul class="space-y-2.5 text-xs">
+                    <li><a href="#services" class="hover:text-amber-400 transition">All Studio Catalog</a></li>
+                    <li><a href="#contact" class="hover:text-amber-400 transition">YouS2 Creative Journal</a></li>
+                    <li><a href="#faq" class="hover:text-amber-400 transition">DTF vs Vinyl Print Guide</a></li>
+                    <li><a href="#contact" class="hover:text-amber-400 transition">About Our Kolkata Studio</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition">Ambassador Program</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">My Account</h4>
+                <ul class="space-y-2.5 text-xs">
+                    <li><a href="#" class="hover:text-amber-400 transition">Customer Sign In</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition">Create Account</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition">Track Recent Orders</a></li>
+                    <li><a href="https://wa.me/918509788421" target="_blank" class="hover:text-amber-400 transition">Support Desk</a></li>
+                </ul>
+                <div class="mt-6">
+                    <h5 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Join Our Socials</h5>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-8 h-8 bg-darkBg border border-gray-700 rounded-lg flex items-center justify-center text-gray-300 hover:text-amber-400 transition"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 bg-darkBg border border-gray-700 rounded-lg flex items-center justify-center text-gray-300 hover:text-amber-400 transition"><i class="fa-brands fa-instagram text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 bg-darkBg border border-gray-700 rounded-lg flex items-center justify-center text-gray-300 hover:text-amber-400 transition"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 border-t border-gray-800/80 flex flex-col sm:flex-row justify-between items-center text-xs gap-4">
+            <p>&copy; 2026 YouS2™. All Rights Reserved. Crafted with pride in Kolkata, India.</p>
+            <div class="flex flex-wrap items-center gap-4 text-[11px] text-gray-500">
+                <span>UPI</span>
+                <span>GPay</span>
+                <span>PhonePe</span>
+                <span>Paytm</span>
+                <span>Cards & NetBanking</span>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript for Animations and Calculator -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        function calculatePrice() {
+            const price = parseInt(document.getElementById('serviceSelect').value) || 0;
+            const qty = parseInt(document.getElementById('qtyInput').value) || 1;
+            const total = price * qty;
+            document.getElementById('totalPriceDisplay').innerText = '₹' + total.toLocaleString('en-IN');
+        }
+
+        function sendEstimateWhatsApp() {
+            const selectElem = document.getElementById('serviceSelect');
+            const serviceName = selectElem.options[selectElem.selectedIndex].text;
+            const qty = document.getElementById('qtyInput').value;
+            const total = document.getElementById('totalPriceDisplay').innerText;
+
+            const msg = `Hi YouS2, I want to confirm an order estimate:\n\nService: ${serviceName}\nQuantity: ${qty}\nEstimated Total: ${total}\n\nPlease proceed with confirmation.`;
+            window.open(`https://wa.me/918509788421?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        function sendDirectMessage() {
+            const name = document.getElementById('clientName').value || 'Customer';
+            const service = document.getElementById('clientService').value;
+            const query = document.getElementById('clientQuery').value || 'No additional notes.';
+
+            const msg = `Hi YouS2 Team,\n\nName: ${name}\nService Required: ${service}\nRequirements: ${query}\n\nPlease get back to me.`;
+            window.open(`https://wa.me/918509788421?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+    </script>
 </body>
 </html>
